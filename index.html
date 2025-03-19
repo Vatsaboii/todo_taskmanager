@@ -3,18 +3,96 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark Mode To-Do List</title>
+    <title>Enhanced To-Do List</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
-  <body>
+  <body class="dark-mode">
     <div class="container">
-      <h1>To-Do List</h1>
+      <header>
+        <h1>To-Do List</h1>
+        <button id="theme-toggle" title="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+      </header>
+
+      <section class="stats-container">
+        <div class="stat-item">
+          <span id="total-tasks">0</span>
+          <span>Total</span>
+        </div>
+        <div class="stat-item">
+          <span id="pending-tasks">0</span>
+          <span>Pending</span>
+        </div>
+        <div class="stat-item">
+          <span id="completed-tasks">0</span>
+          <span>Completed</span>
+        </div>
+      </section>
+
       <div class="input-container">
         <input type="text" id="todo-input" placeholder="Add a new task..." />
-        <button id="add-task-btn">Add Task</button>
+        <input type="date" id="due-date" title="Set due date" />
+        <select id="priority-select" title="Set priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <select id="category-select" title="Set category">
+          <option value="personal">Personal</option>
+          <option value="work">Work</option>
+          <option value="shopping">Shopping</option>
+          <option value="other">Other</option>
+        </select>
+        <button id="add-task-btn" title="Add Task">
+          <i class="fas fa-plus"></i>
+        </button>
       </div>
+
+      <div class="filter-container">
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search tasks..." />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="filter-options">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+
       <ul id="todo-list"></ul>
+
+      <div class="empty-state hidden">
+        <i class="fas fa-clipboard-list"></i>
+        <p>No tasks found</p>
+      </div>
+
+      <div class="modal" id="edit-modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Edit Task</h2>
+          <input type="text" id="edit-task-input" placeholder="Edit task..." />
+          <input type="date" id="edit-due-date" />
+          <select id="edit-priority-select">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <select id="edit-category-select">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="shopping">Shopping</option>
+            <option value="other">Other</option>
+          </select>
+          <button id="save-edit-btn">Save Changes</button>
+        </div>
+      </div>
     </div>
-    <script src="scri.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
