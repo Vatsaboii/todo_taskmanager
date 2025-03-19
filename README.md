@@ -119,31 +119,6 @@ function getDragAfterElement(container, y) {
 }
 ```
 
-### Color Schemes
-The application uses a custom color system with CSS variables for easy theming:
-```css
-:root {
-  /* Base colors */
-  --primary-color: #4f46e5;
-  --primary-hover: #4338ca;
-  --primary-light: #e0e7ff;
-  --success-color: #10b981;
-  --success-light: #d1fae5;
-  --danger-color: #ef4444;
-  --danger-light: #fee2e2;
-  --warning-color: #f59e0b;
-  --warning-light: #fef3c7;
-  --info-color: #0ea5e9;
-  --info-light: #e0f2fe;
-  
-  /* Priority colors */
-  --priority-high: var(--danger-color);
-  --priority-medium: var(--warning-color);
-  --priority-low: var(--info-color);
-  
-  /* And more... */
-}
-```
 
 ## Setup and Usage
 
@@ -163,15 +138,6 @@ The application uses a custom color system with CSS variables for easy theming:
 5. Search for specific tasks with the search bar
 6. Toggle between dark and light mode with the theme button
 
-## Future Enhancements
-- Subtasks and nested task support
-- Recurring tasks
-- Task export/import functionality
-- Data synchronization across devices
-- Custom categories and tags
-- Pomodoro timer integration
-- More detailed task analytics
-
 ## Conclusion
 TaskMaster demonstrates how powerful web applications can be created using only HTML, CSS, and vanilla JavaScript. With its intuitive UI, robust feature set, and thoughtful design, it provides a productive task management experience while serving as an excellent example of modern front-end development practices.
 
@@ -180,3 +146,4 @@ TaskMaster demonstrates how powerful web applications can be created using only 
 1. I am currently implementing the defined features one by one, while simultaneously testing and refining them to enhance functionality and ensure a more efficient and user-friendly experience.
 2. Improving the UI/UX of the website and making it more apealing.
 3. Increasing the number of features present in the website and fully using all the CRUD functionalities.
+4. Subtasks and nested task support
